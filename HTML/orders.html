@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="shortcut icon" href="../Photos/SM.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/orders.css">
+</head>
+<body>
+
+<div class="loader">
+  <img src="../Photos/loader-gif.gif" alt="loading..." />
+</div>
+
+<div class="amazon-orders-main">
+
+    <header>
+        <section class="logo">
+          <div>
+            <a href="../HTML/index.html" title="Home">
+              <img
+                class="image_1"
+                src="../Photos/amazon-logo-white.png"
+                alt="logo"
+              />
+              <img
+                class="image_2"
+                src="../Photos/amazon-mobile-logo-white.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+        </section>
+  
+        <section class="inputSearch">
+          <div class="all">
+            <div class="inputSection">
+              <input
+                type="text"
+                name="search"
+                id="searchInput"
+                placeholder="Search"
+                data-testid="search-input"
+                value
+                required
+              />
+            </div>
+            <div class="searchSection">
+              <button title="Search">
+                <img src="../Photos/search-icon.png" />
+              </button>
+            </div>
+          </div>
+        </section>
+  
+        <section class="shoping">
+          <a href="orders.html">
+            <div class="returnsOrdersSection">
+              <div class="orderTexts">
+                <span class="returns"> Returns </span>
+                <span class="orders"> & Orders </span>
+              </div>
+            </div>
+          </a>
+          <a href="./checkout.html">
+            <div class="cart">
+              <div class="cartImg">
+                <img src="../Photos/cart-icon.png" alt="cart image" />
+                <span class="cartNumber">0</span>
+                <div class="cartText">
+                  <span>Cart</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+  
+        <section class="menuSection">
+          <img src="../Photos/hamburger-menu.png" alt="Menu" title="Menu" />
+        </section>
+  
+        <div class="menuDropdown">
+          <a href="#"> Returns & Orders </a>
+          <a href="#"> Cart (<span>0</span>) </a>
+        </div>
+    </header>
+
+
+    <div class="headerText">
+      <p class="urOrdersText">
+        Your Orders
+      </p>
+    </div>
+
+    <main class="main">
+
+
+       <div class="orders-container">
+
+            <div class="head">
+                <div>
+                    <span class="block">
+                        Order Placed:
+                    </span>
+                    <span>
+                        February 13
+                    </span>
+                </div>
+                <div>
+                    <span class="block">
+                        Total:
+                    </span>
+                    <span class="totalOrders">
+                        $00.0
+                    </span>
+                </div>
+                <div>
+                    <span class="block">
+                        Order ID:
+                    </span>
+                    <span class="test">
+                        27cba69d-4c3d-4098-b42d-ac7fa62b7664
+                    </span>
+                </div>
+            </div>
+
+            <div class="orders-section">
+
+                 <!-- <section>
+                    <div>
+                        <img src="../Photos/1.jpg">
+                    </div>
+                    <div class="test">
+                        <p class="titleText">
+                            Black and Gray Athletic Cotton Socks - 6 Pairs 
+                        </p>
+                        <p class="orderDate">
+                          Arriving on: February 17 
+                        </p>
+                        <p class="orderQuantityText">Quantity: 1 </p>
+                        <button class="buyItAgain">
+                            Buy it Again
+                        </button>
+                        <button class="track">
+                          Track package
+                        </button>
+                    </div>
+                    <div class="trackSection">
+                        <button class="track">
+                            Track package
+                        </button>
+                    </div>
+                </section>  -->
+
+            </div>
+
+        </div>
+
+
+    </main>
+    
+</div>
+
+</body>
+<script type="module" src="../JS/orders.js"></script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon</title>
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="shortcut icon" href="../Photos/SM.png" type="image/x-icon" />
+  </head>
+  <body>
+    
+    <div class="loader">
+      <img src="../Photos/loader-gif.gif" alt="loading..." />
+    </div>
+
+    <header>
+      <section class="logo">
+        <div>
+          <a href="../HTML/index.html" title="Home">
+            <img
+              class="image_1"
+              src="../Photos/amazon-logo-white.png"
+              alt="logo"
+            />
+            <img
+              class="image_2"
+              src="../Photos/amazon-mobile-logo-white.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="inputSearch">
+        <div class="all">
+          <div class="inputSection">
+            <input
+              type="text"
+              name="search"
+              id="searchInput"
+              placeholder="Search"
+              data-testid="search-input"
+              value
+              required
+            />
+          </div>
+          <div class="searchSection">
+            <button title="Search">
+              <img src="../Photos/search-icon.png" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="shoping">
+        <a href="orders.html">
+          <div class="returnsOrdersSection">
+            <div class="orderTexts">
+              <span class="returns"> Returns </span>
+              <span class="orders"> & Orders </span>
+            </div>
+          </div>
+        </a>
+        <a href="./checkout.html">
+          <div class="cart">
+            <div class="cartImg">
+              <img src="../Photos/cart-icon.png" alt="cart image" />
+              <span class="cartNumber">0</span>
+              <div class="cartText">
+                <span>Cart</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section class="menuSection">
+        <img src="../Photos/hamburger-menu.png" alt="Menu" title="Menu" />
+      </section>
+
+      <div class="menuDropdown">
+        <a href="#"> Returns & Orders </a>
+        <a href="#"> Cart (<span>0</span>) </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="cart-container"></div>
+    </main>
+  </body>
+  <script type="module" src="../JS/index.js"></script>
+</html>

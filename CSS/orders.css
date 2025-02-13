@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", system-ui, sans-serif;
+}
+
+:root {
+  --header-color: #131921;
+  --main-color: #fc9700;
+  --main-button-color: #ffd500;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #df8600;
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--header-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header a {
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  border: 1px solid var(--header-color);
+  border-radius: 3px;
+  transition: border 0.2s;
+}
+
+.logo:hover {
+  border: 1px solid white;
+}
+
+.logo div,
+.logo div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo div a {
+  padding: 6px;
+}
+
+.image_1 {
+  width: 110px;
+}
+
+.image_2 {
+  width: 40px;
+  display: none;
+}
+
+.inputSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.inputSearch .all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 850px;
+}
+
+.inputSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 90%;
+}
+
+#searchInput {
+  padding: 0 15px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+#searchInput:focus {
+  outline: none;
+  border: 2px solid var(--main-color);
+}
+
+.searchSection button {
+  background-color: var(--main-color);
+  border: none;
+  height: 40px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.searchSection button img {
+  width: 23px;
+}
+
+.shoping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+  gap: 5px;
+}
+
+.cartImg img {
+  width: 45px;
+}
+
+.cartImg {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cartNumber {
+  position: absolute;
+  top: -2px;
+  left: 21px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.cartText {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.orderTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderTexts,
+.cart {
+  border: 1px solid var(--header-color);
+  border-radius: 3px;
+  padding: 6px;
+  transition: border 0.3s;
+  cursor: pointer;
+}
+
+.orderTexts:hover,
+.cart:hover {
+  border: 1px solid white;
+}
+
+.returns {
+  font-size: 13px;
+}
+
+.orders {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.menuSection img {
+  width: 23px;
+}
+
+.menuSection {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menuDropdown {
+  background-color: var(--header-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+  text-align: center;
+  overflow: hidden;
+  transition: height 0.4s;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.menuDropdown a {
+  color: white;
+}
+
+.menuDropdown a span {
+  color: var(--main-color);
+}
+
+@media (max-width: 707px) {
+  .image_2 {
+    display: block;
+  }
+  .image_1 {
+    display: none;
+  }
+  .shoping {
+    display: none;
+  }
+  .menuSection {
+    display: flex;
+  }
+  .logo {
+    width: 80px;
+  }
+}
+
+/* orders-container */
+
+.main {
+  padding: 20px;
+}
+
+.headerText {
+  max-width: 800px;
+  padding: 20px;
+  padding-bottom: 0 !important;
+  margin: auto;
+}
+
+.urOrdersText {
+  margin-top: 70px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.orders-container {
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #dbdbdb;
+  border-radius: 7px;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 200px 200px 1fr;
+  background-color: #f0f2f2;
+  padding: 15px;
+}
+
+.head .block {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-wrap: wrap;
+  display: block;
+}
+
+.orders-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.orders-section section {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px;
+  width: 100%;
+  gap: 15px;
+}
+
+.orders-section section div img {
+  width: 100% !important;
+}
+
+.titleText {
+  font-weight: bold;
+}
+
+.orderQuantityText {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.orderDate {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.buyItAgain {
+  border: none;
+  cursor: pointer;
+  background-color: var(--main-button-color);
+  padding: 12px 30px;
+  margin-top: 5px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.buyItAgain:hover {
+  background-color: #e7c100;
+}
+
+.trackSection .track {
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid gainsboro;
+  padding: 7px 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+  box-shadow: 1px 1px 10px #dfdfdf;
+}
+
+.trackSection .track:hover {
+  background-color: #f7fafa;
+  box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.test .track {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid gainsboro;
+  padding: 12px 30px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  box-shadow: 1px 1px 10px #dfdfdf;
+  display: none;
+  margin-top: 10px;
+}
+.test .track:hover {
+  background-color: #f7fafa;
+  box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+@media (max-width: 635px) {
+  .head {
+    grid-template-columns: 200px;
+  }
+  .block {
+    display: inline-block !important;
+  }
+  .orders-section section {
+    grid-template-columns: 100px 1fr;
+  }
+  .trackSection .track {
+    display: none;
+  }
+  .test .track {
+    display: inline-block;
+  }
+}
+
+/* Loader */
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.loader img{
+  width: 300px;
+}
+
+.amazon-orders-main{
+  display: none;
+}

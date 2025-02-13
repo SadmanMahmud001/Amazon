@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", system-ui, sans-serif;
+}
+
+:root {
+  --header-color: #131921;
+  --main-color: #fc9700;
+  --main-button-color: #ffd500;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #df8600;
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+main {
+  margin: auto;
+  max-width: 1200px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.logo,
+.checkoutItems,
+.lock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigImage {
+  width: 120px;
+}
+
+.smallIamge {
+  width: 35px;
+  display: none;
+}
+
+.lock img {
+  width: 17px;
+}
+
+.checkoutItems p {
+  font-size: 23px;
+  font-weight: 500;
+}
+.checkoutItems p span {
+  color: #007185;
+}
+
+@media (max-width: 580px) {
+  .bigImage {
+    display: none;
+  }
+  .smallIamge {
+    display: block;
+  }
+}
+
+/* checkoutItem */
+
+.reviewContainer {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  gap: 12px;
+  padding: 10px 20px;
+  /* background-color: aquamarine; */
+}
+
+main h2 {
+  margin-top: 50px;
+  margin-left: 22px;
+}
+
+@media (max-width: 1000px) {
+  .reviewContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .roderSummary {
+    width: 100% !important;
+  }
+}
+
+.reviewContainer section {
+  width: 100%;
+}
+
+.roderSummary {
+  border: 1px solid #dedede;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  /* width: 500px; */
+  border-radius: 4px;
+  /* background-color: lightsalmon; */
+}
+
+.checkoutItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  /* padding: 10px; */
+  margin: auto;
+  /* background-color: lightseagreen; */
+  /* margin-top: 50px; */
+  /* flex: 1; */
+}
+
+.items {
+  margin: auto;
+  border: 1px solid #dedede;
+  padding: 10px 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Roder Summary */
+
+.roderSummary p {
+  font-size: 15px;
+}
+
+.roderSummaryText {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.content section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  background-color: #dedede;
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.roderTotal {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.roderTotal p {
+  color: #b12704;
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.yourOrder {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yourOrder button {
+  background-color: var(--main-button-color);
+  border: none;
+  width: 100%;
+  padding: 13px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.yourOrder button:hover {
+  background-color: #e7c100;
+}
+
+.cart-item-details {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 25px;
+}
+
+.itemsImageDiv img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.delivery-option {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.date {
+  font-weight: bold;
+  color: black;
+}
+
+.green {
+  color: green;
+}
+
+.shipping {
+  color: #000000;
+}
+
+.itemsTitle {
+  font-weight: bold;
+}
+
+.price {
+  color: #b12704;
+  font-weight: bold;
+}
+
+.updateDelete {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.updateDeleteButtons {
+  display: flex;
+  align-content: center;
+  gap: 10px;
+  min-width: 220px;
+}
+
+.updateDeleteButtons button {
+  border: none;
+  background-color: transparent;
+  color: #005cc8;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.updateDeleteButtons button:hover {
+  color: #b12704;
+}
+
+.title {
+  font-size: 20px;
+  color: #007607;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.loader img{
+  width: 300px;
+}
+
+main{
+  display: none;
+}

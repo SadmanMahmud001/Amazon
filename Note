@@ -1,0 +1,18 @@
+https://youtu.be/EerdGm-ehJQ?list=LL&t=40393
+function menu() {
+  let menuSection = document.querySelector(".menuSection");
+
+  let menuDropdown = document.querySelector(".menuDropdown");
+
+  menuDropdown.style.height = "0px";
+
+  menuSection.onclick = () => {
+    if (menuDropdown.style.height === "0px") {
+      menuDropdown.style.height = "100px";
+    } else {
+      menuDropdown.style.height = "0px";
+    }
+  };
+}
+menu();
+

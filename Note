@@ -1,18 +1,48 @@
-https://youtu.be/EerdGm-ehJQ?list=LL&t=40393
-function menu() {
-  let menuSection = document.querySelector(".menuSection");
+//youtu.be/EerdGm-ehJQ?list=LL&t=40393
 
-  let menuDropdown = document.querySelector(".menuDropdown");
 
-  menuDropdown.style.height = "0px";
+<div class="menuDropdown">
+  <a href="orders.html"> Returns & Orders </a>
+  <a href="checkout.html">Cart (<span>0</span>)</a>
+</div>;
 
-  menuSection.onclick = () => {
-    if (menuDropdown.style.height === "0px") {
-      menuDropdown.style.height = "100px";
-    } else {
-      menuDropdown.style.height = "0px";
-    }
-  };
+.menuDropdown {
+  background-color: var(--header-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65px;
+  z-index: 100;
+  text-align: center;
+  overflow: hidden;
+  transition: height 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
 }
-menu();
 
+.menuDropdown a {
+  color: white;
+}
+
+.menuDropdown a span {
+  color: var(--main-color);
+}
+
+function menu(heigth) {
+  let menuSection = document.querySelector(".menuSection");
+  let menuDropdown = document.querySelector(".menuDropdown");
+  if (menuSection && menuDropdown) {
+    menuDropdown.style.height = "0px";
+
+    menuSection.addEventListener("click", () => {
+      if (menuDropdown.style.height === "0px") {
+        menuDropdown.style.height = `${heigth}px`;
+      } else {
+        menuDropdown.style.height = "0px";
+      }
+    });
+  }
+}
+menu(100);

@@ -89,9 +89,9 @@ addToCartButtons.forEach((button, index) => {
 
     document.querySelectorAll(".add-to-cart-text").forEach((element) => {
       element.addEventListener("click", () => {
-        element.style.opacity = "1"; // Show it
+        element.style.opacity = "1";
         setTimeout(() => {
-          element.style.opacity = "0"; // Hide after 1 second
+          element.style.opacity = "0";
         }, 1000);
       });
     });
@@ -106,3 +106,35 @@ function loader(loaderTime) {
   }, loaderTime);
 }
 loader(3000);
+
+//menu
+
+function menu() {
+  const menuSection = document.querySelector(".menuSection");
+  const menuDropdownContainer = document.querySelector(
+    ".menuDropdownContainer"
+  );
+  const body = document.body;
+
+  if (!menuSection || !menuDropdownContainer) {
+    console.error("Menu elements not found");
+    return;
+  }
+
+  const menuDropdownText = document.querySelector(".menuDropdown a span");
+
+  if (menuDropdownText && typeof showQuantity !== "undefined") {
+    menuDropdownText.innerHTML = showQuantity;
+  }
+
+  menuDropdownContainer.style.transform = "translateX(-680px)";
+
+  menuSection.addEventListener("click", () => {
+    menuDropdownContainer.style.transform =
+      menuDropdownContainer.style.transform === "translateX(-680px)"
+        ? "translateX(0)"
+        : "translateX(-680px)";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", menu);

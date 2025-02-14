@@ -6,7 +6,6 @@ let showQuantityValue =
 
 let saveHTML = "";
 saveAddToCart.forEach((index, radio) => {
-
   let { image, title, price, quantity } = index;
   let html = `
   <div class="items">
@@ -111,7 +110,6 @@ deleteButtons.forEach((button) => {
 });
 
 function getOrderSummary() {
-  
   let totalPrice = 0;
   cartItems.forEach((item) => {
     totalPrice += (item.price * item.quantity) / 100;

@@ -311,10 +311,10 @@ label {
   justify-content: center;
   background-color: #ffffff;
 }
-.loader img{
+.loader img {
   width: 300px;
 }
 
-main{
+main {
   display: none;
 }

@@ -6,6 +6,52 @@ let totalOrders = document.querySelector(".totalOrders");
 
 let saveHTML = "";
 
+const today = new Date();
+
+const twoDaysAgo = new Date();
+twoDaysAgo.setDate(today.getDate() - 2);
+
+const weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function formatDate(date) {
+  const dayOfWeek = weekdays[date.getDay()];
+  const month = months[date.getMonth()];
+  const dayOfMonth = date.getDate();
+  return `${dayOfWeek}, ${month} ${dayOfMonth}`;
+}
+
+const formattedToday = formatDate(today);
+const formattedTwoDaysAgo = formatDate(twoDaysAgo);
+
+console.log("Today's Date:", formattedToday);
+console.log("Date 2 Days Ago:", formattedTwoDaysAgo);
+let dateElement = document.querySelector(".dateElement");
+if (dateElement) {
+  dateElement.innerHTML = formattedToday;
+}
+
 saveAddToCart.forEach((index) => {
   let { image, price, quantity, title } = index;
   const html = `
@@ -18,7 +64,7 @@ saveAddToCart.forEach((index) => {
                     ${title}
                 </p>
                 <p class="orderDate">
-                    Arriving on: February 17 
+                    Arriving on: ${formattedToday}
                 </p>
                 <p class="orderQuantityText">Quantity: ${quantity} </p>
                 <button class="buyItAgain">

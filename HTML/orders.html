@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Orders</title>
-    <link rel="shortcut icon" href="../Photos/SM.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/orders.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="../Photos/SM.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../CSS/orders.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <img src="../Photos/loader-gif.gif" alt="loading..." />
+    </div>
 
-<div class="loader">
-  <img src="../Photos/loader-gif.gif" alt="loading..." />
-</div>
-
-<div class="amazon-orders-main">
-
-    <header>
+    <div class="amazon-orders-main">
+      <header>
         <section class="logo">
           <div>
             <a href="../HTML/index.html" title="Home">
@@ -32,7 +28,7 @@
             </a>
           </div>
         </section>
-  
+
         <section class="inputSearch">
           <div class="all">
             <div class="inputSection">
@@ -53,7 +49,7 @@
             </div>
           </div>
         </section>
-  
+
         <section class="shoping">
           <a href="orders.html">
             <div class="returnsOrdersSection">
@@ -75,59 +71,35 @@
             </div>
           </a>
         </section>
-  
+
         <section class="menuSection">
           <img src="../Photos/hamburger-menu.png" alt="Menu" title="Menu" />
         </section>
-  
-        <div class="menuDropdown">
-          <a href="#"> Returns & Orders </a>
-          <a href="#"> Cart (<span>0</span>) </a>
-        </div>
-    </header>
+      </header>
 
+      <div class="headerText">
+        <p class="urOrdersText">Your Orders</p>
+      </div>
 
-    <div class="headerText">
-      <p class="urOrdersText">
-        Your Orders
-      </p>
-    </div>
-
-    <main class="main">
-
-
-       <div class="orders-container">
-
-            <div class="head">
-                <div>
-                    <span class="block">
-                        Order Placed:
-                    </span>
-                    <span>
-                        February 13
-                    </span>
-                </div>
-                <div>
-                    <span class="block">
-                        Total:
-                    </span>
-                    <span class="totalOrders">
-                        $00.0
-                    </span>
-                </div>
-                <div>
-                    <span class="block">
-                        Order ID:
-                    </span>
-                    <span class="test">
-                        27cba69d-4c3d-4098-b42d-ac7fa62b7664
-                    </span>
-                </div>
+      <main class="main">
+        <div class="orders-container">
+          <div class="head">
+            <div>
+              <span class="block"> Order Placed: </span>
+              <span class="dateElement"> February 13 </span>
             </div>
+            <div>
+              <span class="block"> Total: </span>
+              <span class="totalOrders"> $00.0 </span>
+            </div>
+            <div>
+              <span class="block"> Order ID: </span>
+              <span class="test"> 27cba69d-4c3d-4098-b42d-ac7fa62b7664 </span>
+            </div>
+          </div>
 
-            <div class="orders-section">
-
-                 <!-- <section>
+          <div class="orders-section">
+            <!-- <section>
                     <div>
                         <img src="../Photos/1.jpg">
                     </div>
@@ -152,16 +124,19 @@
                         </button>
                     </div>
                 </section>  -->
-
-            </div>
-
+          </div>
         </div>
+      </main>
+    </div>
 
-
-    </main>
-    
-</div>
-
-</body>
-<script type="module" src="../JS/orders.js"></script>
+    <div class="menuDropdownContainer">
+      <div class="menuDropdown">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./checkout.html">Returns & Orders</a>
+        <a href="./orders.html">Cart(<span>0</span>)</a>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../JS/orders.js"></script>
 </html>

@@ -219,30 +219,6 @@ header a {
   cursor: pointer;
 }
 
-.menuDropdown {
-  background-color: var(--header-color);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 60px;
-  z-index: 100;
-  text-align: center;
-  overflow: hidden;
-  transition: height 0.4s;
-  display: none;
-  flex-direction: column;
-  gap: 15px;
-  padding: 10px 0;
-}
-
-.menuDropdown a {
-  color: white;
-}
-
-.menuDropdown a span {
-  color: var(--main-color);
-}
-
 @media (max-width: 707px) {
   .image_2 {
     display: block;
@@ -382,7 +358,8 @@ header a {
 
 @media (max-width: 635px) {
   .head {
-    grid-template-columns: 200px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   .block {
     display: inline-block !important;
@@ -412,10 +389,59 @@ header a {
   justify-content: center;
   background-color: #ffffff;
 }
-.loader img{
+.loader img {
   width: 300px;
 }
 
-.amazon-orders-main{
+.amazon-orders-main {
   display: none;
+}
+
+/* menu */
+
+.menuDropdownContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  margin-top: 64px;
+  background-color: #c9c9c977;
+  transform: translateX(-1300px);
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.menuDropdown {
+  background-color: #131921;
+  width: 200px;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.menuDropdown a {
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.menuDropdown a:hover {
+  background-color: #26323f;
+}
+.menuDropdown a span {
+  color: var(--main-color);
+}
+
+@media (max-width: 707px) {
+  .menuDropdownContainer {
+    display: flex;
+  }
 }

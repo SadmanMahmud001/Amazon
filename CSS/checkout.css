@@ -223,6 +223,24 @@ main h2 {
   object-fit: cover;
 }
 
+@media (max-width: 645px) {
+  .cart-item-details {
+    grid-template-columns: none;
+  }
+  .itemsImageDiv img {
+    width: 150px;
+  }
+  .title {
+    font-size: 17px !important;
+  }
+  .shipping {
+    font-size: 13px !important;
+  }
+  main h2 {
+    text-align: center;
+  }
+}
+
 h3 {
   font-size: 16px;
   margin-bottom: 10px;

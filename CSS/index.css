@@ -370,9 +370,9 @@ main {
   z-index: 1;
   height: 100%;
   width: 100%;
-  margin-top: 65px;
+  margin-top: 64px;
   background-color: #c9c9c977;
-  transform: translateX(-680px);
+  transform: translateX(-1300px);
   z-index: 1;
   display: none;
   overflow: hidden;
@@ -383,21 +383,24 @@ main {
   background-color: #131921;
   width: 200px;
   height: 100%;
-  padding: 20px;
-}
-
-.menuDropdown ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  padding-top: 20px;
 }
 
-.menuDropdown ul li a {
+.menuDropdown a {
   color: white;
   cursor: pointer;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-.menuDropdown ul li a span {
+.menuDropdown a:hover {
+  background-color: #26323f;
+}
+.menuDropdown a span {
   color: var(--main-color);
 }
 

@@ -114,27 +114,26 @@ function menu() {
   const menuDropdownContainer = document.querySelector(
     ".menuDropdownContainer"
   );
-  const body = document.body;
-
-  if (!menuSection || !menuDropdownContainer) {
-    console.error("Menu elements not found");
-    return;
-  }
 
   const menuDropdownText = document.querySelector(".menuDropdown a span");
 
-  if (menuDropdownText && typeof showQuantity !== "undefined") {
+  if (menuDropdownText) {
     menuDropdownText.innerHTML = showQuantity;
   }
 
-  menuDropdownContainer.style.transform = "translateX(-680px)";
+  if (menuDropdownContainer) {
+    menuDropdownContainer.style.transform = "translateX(-1300px)";
+  }
 
-  menuSection.addEventListener("click", () => {
-    menuDropdownContainer.style.transform =
-      menuDropdownContainer.style.transform === "translateX(-680px)"
-        ? "translateX(0)"
-        : "translateX(-680px)";
-  });
+  if (menuSection) {
+    menuSection.addEventListener("click", () => {
+      if (menuDropdownContainer.style.transform === "translateX(-1300px)") {
+        menuDropdownContainer.style.transform = "translateX(0)";
+      } else {
+        menuDropdownContainer.style.transform = "translateX(-1300px)";
+      }
+    });
+  }
 }
 
-document.addEventListener("DOMContentLoaded", menu);
+menu();

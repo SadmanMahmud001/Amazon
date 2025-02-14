@@ -5,11 +5,55 @@ let showQuantityValue =
   JSON.parse(localStorage.getItem("saveShowQuantity")) || 0;
 
 let saveHTML = "";
+
+const today = new Date();
+
+const twoDaysAgo = new Date();
+const threeDaysAgo = new Date();
+twoDaysAgo.setDate(today.getDate() - 2);
+threeDaysAgo.setDate(today.getDate() - 4);
+
+const weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function formatDate(date) {
+  const dayOfWeek = weekdays[date.getDay()];
+  const month = months[date.getMonth()];
+  const dayOfMonth = date.getDate();
+  return `${dayOfWeek}, ${month} ${dayOfMonth}`;
+}
+
+const formattedToday = formatDate(today);
+const formattedTwoDaysAgo = formatDate(twoDaysAgo);
+const formattedThreeDaysAgo = formatDate(threeDaysAgo);
+
 saveAddToCart.forEach((index, radio) => {
   let { image, title, price, quantity } = index;
   let html = `
   <div class="items">
-        <p class="title">Delivery date: Wednesday, February 12</p>
+        <p class="title">Delivery date: ${formattedToday}</p>
         <div class="cart-item-details">
 
             <div class="itemsImageDiv">
@@ -38,7 +82,7 @@ saveAddToCart.forEach((index, radio) => {
                 <div class="delivery-option">
                 <input type="radio" id="option1-${radio}" name="delivery-${radio}" checked />
                 <label for="option1-${radio}">
-                    <span class="date green">Tuesday, February 18</span>
+                    <span class="date green">${formattedToday}</span>
                     <br />
                     <span class="shipping">FREE Shipping</span>
                 </label>
@@ -47,7 +91,7 @@ saveAddToCart.forEach((index, radio) => {
                 <div class="delivery-option">
                 <input type="radio" id="option2-${radio}" name="delivery-${radio}" />
                 <label for="option2-${radio}">
-                    <span class="date">Wednesday, February 12</span>
+                    <span class="date">${formattedTwoDaysAgo}</span>
                     <br />
                     <span class="shipping">$4.99 - Shipping</span>
                 </label>
@@ -56,7 +100,7 @@ saveAddToCart.forEach((index, radio) => {
                 <div class="delivery-option">
                 <input type="radio" id="option3-${radio}" name="delivery-${radio}" />
                 <label for="option3-${radio}">
-                    <span class="date">Monday, February 10</span>
+                    <span class="date">${formattedThreeDaysAgo}</span>
                     <br />
                     <span class="shipping">$9.99 - Shipping</span>
                 </label>
